@@ -1,16 +1,18 @@
 // import { useAuth } from '@src/hooks/useAuth'
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import { RouterItem } from './type'
 
-const routes: Array<RouteRecordRaw> = [
-	{
-		path: '/',
-		name: 'Home',
-		component: () => import('@views/home/index.vue')
-	},
+export const routes: Array<RouterItem> = [
 	{
 		path: '/login',
 		name: 'Login',
 		component: () => import('@views/login/index.vue')
+	},
+	{
+		path: '/layout',
+		name: 'Layout',
+		breadcrumb: '工作台',
+		component: () => import('@views/layout/index.vue')
 	}
 ]
 

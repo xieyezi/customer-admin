@@ -6,3 +6,4 @@
 src/services/*
 src/views/components/Upload.vue
 vite.config.ts
+components.d.ts

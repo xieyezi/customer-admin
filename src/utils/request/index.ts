@@ -3,6 +3,7 @@ import axios, { AxiosRequestConfig } from 'axios'
 import { errorMsg, handleCommonError, handleNoCommontError } from './errorHandle'
 import qs from 'qs'
 import { getLocalStorage } from '../storage'
+import { message } from 'ant-design-vue'
 
 type requestOptions = AxiosRequestConfig & {
 	url: string
@@ -83,7 +84,7 @@ export default async function request(options: requestOptions) {
 	}
 	delete newOptions.body
 
-	// if (url !== '/other/image_upload/') Toast.loading({ message: '加载中...', forbidClick: true })
+	if (url !== '/other/image_upload/') message.loading({ message: '加载中...', forbidClick: true })
 
 	const newUrl = (basePrefix || baseUrl) + url
 

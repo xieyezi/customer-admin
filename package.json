@@ -44,5 +44,10 @@
     "vite": "^2.6.4",
     "vue-eslint-parser": "^8.0.0",
     "vue-tsc": "^0.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }

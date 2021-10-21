@@ -1,0 +1,48 @@
+{
+  "name": "customer-admin",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview",
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "pre-commit": "yarn lint-staged",
+    "lint": "tsc --noEmit &&  eslint src --ext .ts,.vue",
+    "lint:fix": "tsc --noEmit && eslint --fix --ext src --ext .ts,.vue",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
+    "commit": "git-cz"
+  },
+  "dependencies": {
+    "ant-design-vue": "^2.2.8",
+    "axios": "^0.23.0",
+    "pinia": "^2.0.0-rc.14",
+    "vue": "^3.2.16",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@types/node": "^16.11.1",
+    "@types/qs": "^6.9.7",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.2",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-define-config": "^1.1.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^7.20.0",
+    "husky": "^7.0.4",
+    "less": "^4.1.2",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1",
+    "qs": "^6.10.1",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.4",
+    "vue-eslint-parser": "^8.0.0",
+    "vue-tsc": "^0.3.0"
+  }
+}

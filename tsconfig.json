@@ -9,7 +9,18 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "paths": {
+			"@src/*": ["src/*"],
+			"@assets/*": ["src/assets/*"],
+			"@components/*": ["src/components/*"],
+			"@config/*": ["src/config/*"],
+			"@uitls/*": ["src/uitls/*"],
+			"@views/*": ["src/views/*"]
+		}
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

@@ -1,35 +1,21 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { UserOutlined, VideoCameraOutlined, UploadOutlined } from '@ant-design/icons-vue'
 import Header from './components/Header/index.vue'
+import SideMenu from './components/Menu/index.vue'
 
-const selectedKeys = ref<string[]>(['1'])
 const collapsed = ref<boolean>(false)
 </script>
 
 <template>
-	<ALayout>
+	<ALayout style="height: 100%">
 		<ALayoutSider v-model:collapsed="collapsed" :trigger="null" collapsible>
 			<div class="logo"></div>
-			<AMenu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
-				<AMenuItem key="1">
-					<UserOutlined />
-					<span>nav 1</span>
-				</AMenuItem>
-				<AMenuItem key="2">
-					<VideoCameraOutlined />
-					<span>nav 2</span>
-				</AMenuItem>
-				<AMenuItem key="3">
-					<UploadOutlined />
-					<span>nav 3</span>
-				</AMenuItem>
-			</AMenu>
+			<SideMenu />
 		</ALayoutSider>
 		<ALayout>
 			<Header v-model:collapsed="collapsed" />
 			<ALayoutContent :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }">
-				Content
+				<RouterView />
 			</ALayoutContent>
 		</ALayout>
 	</ALayout>

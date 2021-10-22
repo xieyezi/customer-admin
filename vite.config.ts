@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => ({
 	plugins: [
 		vue(),
 		ViteComponents({
-			dts: false,
+			dts: true,
 			resolvers: [AntDesignVueResolver()]
 		})
 	],

@@ -11,9 +11,9 @@ const breadcrumbList = computed(() => {
 </script>
 
 <template>
-	<a-breadcrumb>
-		<a-breadcrumb-item v-for="item in breadcrumbList" :key="item">{{ item.breadcrumb }}</a-breadcrumb-item>
-	</a-breadcrumb>
+	<ABreadcrumb>
+		<ABreadcrumbItem v-for="item in breadcrumbList" :key="item">{{ item.breadcrumb }}</ABreadcrumbItem>
+	</ABreadcrumb>
 </template>
 
 <style scoped></style>

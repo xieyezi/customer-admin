@@ -1,19 +1,26 @@
 // import { useAuth } from '@src/hooks/useAuth'
 import { createRouter, createWebHistory } from 'vue-router'
 import { RouterItem } from './type'
+import OrderRoutes from './order'
+import CustomerRoutes from './customer'
 
 export const routes: Array<RouterItem> = [
 	{
 		path: '/login',
 		name: 'Login',
+		hideInMenu: true,
 		component: () => import('@views/login/index.vue')
 	},
 	{
-		path: '/layout',
+		path: '/',
 		name: 'Layout',
 		breadcrumb: '工作台',
+		redirect: '/order/list',
+		hideInMenu: true,
 		component: () => import('@views/layout/index.vue')
-	}
+	},
+	OrderRoutes,
+	CustomerRoutes
 ]
 
 const router = createRouter({
